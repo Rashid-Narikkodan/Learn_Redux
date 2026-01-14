@@ -11,7 +11,7 @@ type CounterAction ={type:string,payload:boolean}
 //   showStatus: false
 // }
 
-export const counterReducer=combineReducers({ // it replaces the maual way of calling each rducers with state
+export const combined=combineReducers({ // it replaces the maual way of calling each rducers with state
   value:valueReducer,
   showStatus:showStatus,
 })

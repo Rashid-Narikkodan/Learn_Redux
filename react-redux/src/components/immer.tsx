@@ -41,7 +41,6 @@ const initialState: State = [
    Components
 ========================= */
 const RoomName = ({ data, onChange }:{data:Room,onChange:(e:ChangeEvent<HTMLInputElement>)=>void}) => {
-  console.log('roomname')
 
   return (
     <div>
@@ -56,7 +55,6 @@ const RoomName = ({ data, onChange }:{data:Room,onChange:(e:ChangeEvent<HTMLInpu
 }
 
 const CarName = React.memo(({ data, onChange }:{data:Car,onChange:(e:ChangeEvent<HTMLInputElement>)=>void}) => {
-  console.log('carname')
   return (
     <div>
       <div>Car name</div>
@@ -73,10 +71,7 @@ const CarName = React.memo(({ data, onChange }:{data:Car,onChange:(e:ChangeEvent
 Main Component
 ========================= */
 const ComplexState = () => {
-  const [info, setInfo] = useState<State>(initialState)
-
-  console.log(info)
-  
+  const [info, setInfo] = useState<State>(initialState)  
   const updateRoom = (e:ChangeEvent<HTMLInputElement>) => {
     // 1st Approach
     // setInfo(prev => [  //its a deeply shallow copy technique, possible but complecated 

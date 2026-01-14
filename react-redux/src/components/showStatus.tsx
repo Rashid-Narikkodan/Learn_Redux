@@ -4,7 +4,6 @@ import { show } from '../reducers/counterReducer'
 
 const ShowStatus = () => {
     const val=useSelector<CounterState>(state=>state.showStatus)
-    console.log(val)
     const dispatch = useDispatch()
     const handleCheck=()=>{
         dispatch(show(!val))//used action which created, so type error can avoid
@@ -12,7 +11,7 @@ const ShowStatus = () => {
   return (
     <div className='flex flex-col'>
         <div className="flex gap-2 p-3 border border-white rounded" onClick={handleCheck}>
-        <label htmlFor="" className="mr-2">show status</label>
+        <label className="mr-2">show status</label>
         <input checked={typeof val == 'boolean' ? val : false} type="checkbox"/>
         </div>
         <div>
