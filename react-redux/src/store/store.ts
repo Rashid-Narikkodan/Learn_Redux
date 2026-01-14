@@ -1,13 +1,12 @@
 import { legacy_createStore, applyMiddleware } from "redux"
 import { combined } from "../reducers/counterReducer"
-import testMiddleware from "./middleware/testMiddleware"
+import logger from 'redux-logger'
 
-
-// export type RootState = ReturnType<typeof combined>
+export type RootState = ReturnType<typeof combined>
 
 export const store = legacy_createStore(
   combined,
-  applyMiddleware(testMiddleware)
+  applyMiddleware(logger)
 )
 
-// export type AppDispatch = typeof store.dispatch
+export type AppDispatch = typeof store.dispatch
