@@ -13,13 +13,26 @@ export function counterReducer(
   state: CounterState = initialState,
   action: CounterAction
 ): CounterState {
-  switch (action.type) {
+  return {
+    value:valueReducer(state.value,action),
+    showStatus:showStatus(state.showStatus,action),
+  }
+}
+
+function valueReducer(state:number=0,action:CounterAction){
+   switch (action.type) {
     case "inc":
-      return { ...state, value: state.value + 1 }
+      return state+1
     case "dec":
-      return { ...state, value: state.value - 1 }
+      return state-1
+    default:
+      return state
+  }
+}
+function showStatus(state:boolean=false,action:CounterAction){
+   switch (action.type) {
     case "show":
-      return { ...state, showStatus: action.payload }
+      return action.payload
     default:
       return state
   }
