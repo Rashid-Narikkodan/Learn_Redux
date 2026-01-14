@@ -44,3 +44,9 @@ function showStatus(state:boolean=false,action:CounterAction){
       return state
   }
 }
+
+
+//action creates
+export const increment=()=>({type:'inc'})
+export const decrement=()=>({type:'dec'})
+export const show=(payload:unknown)=>({type:'show',payload})

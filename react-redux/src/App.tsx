@@ -11,7 +11,14 @@ function App() {
         <ShowStatus />
       </Border>
       <Border text="">
-        Now we need to use combineReducers, and create different reducers for different purposes
+        -Now we need to use combineReducers, and create different reducers for different purposes, 
+        <br/>
+        <br/>
+        -now we just created combineReducers and solit reducers,
+        <br />
+        <br />
+        now
+        we need to use action creaters to maintain action in dispatch
       </Border>
     </div>
   );
