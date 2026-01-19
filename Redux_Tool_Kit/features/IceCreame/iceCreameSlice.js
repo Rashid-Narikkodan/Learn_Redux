@@ -13,8 +13,7 @@ const iceCreameSlice = createSlice({
         restock:(state,action)=>{state.numOfIceCreame+=action.payload}
     },
     extraReducers:(builder)=>{
-        builder.addCase(cakeActions.ordered,(state)=>{state.numOfIceCreame--}),
-        builder.addAsyncThunk()
+        builder.addCase(cakeActions.ordered,(state)=>{state.numOfIceCreame--})
     }
 })
 
